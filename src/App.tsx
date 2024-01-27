@@ -1,31 +1,17 @@
-import { useState } from "react"
-
-import reactLogo from "@/assets/react.svg"
-
-import "./App.css"
-import viteLogo from "/vite.svg"
-
 function App() {
-    const [count, setCount] = useState(0)
-
     return (
         <div className="App">
-            <div>
-                <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+            Bézier curves have been a recurring theme in my frontend engineering career. I have used them extensively in
+            my work - in animations and SVG paths of illustrations and icons. However, I only recently took an interest
+            in understanding the underlying logic that governs their behaviour. This demystified curve-related path
+            commands for me and gave me a deeper understanding of web animations. In this article, I’ll share my
+            interesting findings on Bézier curves.In CSS animations, easing functions specify the rate of change of a
+            property over time. There are 3 types of easing functions - Linear, Step and Cubic Bézier.101Linear
+            EasingLinear is typically used to animate properties at a constant rate/speed.101Step EasingStep is used to
+            animate properties at equal time intervals.101Cubic Bézier EasingCubic Bézier is used to animate properties
+            at variable rate/speed.Predefined CSS easings like ease, ease-in, ease-out and ease-in-out as well as
+            commonly used smooth easings like ease in sine and ease in cubic are examples of cubic Bézier easing
+            functions. Custom easings can also be generated with cubic Bézier easing functions.
         </div>
     )
 }
