@@ -13,11 +13,18 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --graph-width: 1400px;
         --graph-outline-color: #f5f5f5;
         --main-cell-dimension: 100px;
         --light-gray: #767676;
         --small-text: 12px;
+        --article-width: 500px;
+        --graph-width: calc(var(--main-cell-dimension) * round(up, 100vw / var(--main-cell-dimension), 2));
+    }
+    
+    @media screen and (min-width: 1200px) {
+        :root {
+            --article-width: 1200px;
+        }
     }
 
     #root {

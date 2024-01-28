@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
-const Text = styled.div`
-    margin-top: 120px;
-`
+const Text = styled.div``
 
 function App() {
     return (

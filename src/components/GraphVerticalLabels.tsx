@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react"
 import styled from "styled-components"
+
+import { getVerticalLabels } from "@/utils"
 
 const Wrapper = styled.div`
     display: none;
@@ -26,10 +29,23 @@ const Label = styled.span<{ children: React.ReactNode }>`
 `
 
 const GraphVerticalLabels = () => {
+    const [labels, setLabels] = useState(getVerticalLabels())
+
+    useEffect(() => {
+        const listener = () => {
+            setLabels(getVerticalLabels())
+        }
+
+        window.addEventListener("resize", listener)
+        return () => {
+            window.removeEventListener("resize", listener)
+        }
+    }, [])
+
     return (
         <Wrapper>
-            {Array.from({ length: 14 }).map((_, index) => (
-                <Label key={index}>{index * 100}</Label>
+            {labels.map((label) => (
+                <Label key={label}>{label}</Label>
             ))}
         </Wrapper>
     )

@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react"
 import styled from "styled-components"
+
+import { getHorizontalLabels } from "@/utils"
 
 const Wrapper = styled.div`
     display: none;
@@ -55,11 +58,24 @@ const Label = styled.span<{ children: React.ReactNode }>`
 `
 
 const GraphHorizontalLabels = () => {
+    const [labels, setLabels] = useState(getHorizontalLabels())
+
+    useEffect(() => {
+        const listener = () => {
+            setLabels(getHorizontalLabels())
+        }
+
+        window.addEventListener("resize", listener)
+        return () => {
+            window.removeEventListener("resize", listener)
+        }
+    }, [])
+
     return (
         <Wrapper>
             <Background />
-            {Array.from({ length: 14 }).map((_, index) => (
-                <Label key={index}>{index * 100}</Label>
+            {labels.map((label) => (
+                <Label key={label}>{label}</Label>
             ))}
         </Wrapper>
     )
