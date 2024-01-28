@@ -59,7 +59,7 @@ const GraphHorizontalLabels = () => {
         <Wrapper>
             <Background />
             {Array.from({ length: 14 }).map((_, index) => (
-                <Label key={index}>{String(index)}</Label>
+                <Label key={index}>{index * 100}</Label>
             ))}
         </Wrapper>
     )
