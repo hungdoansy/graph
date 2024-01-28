@@ -1,14 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-import Content from "@/components/Content"
+import Article from "@/components/Article"
 import Graph from "@/components/Graph"
 import GraphHorizontalLabels from "@/components/GraphHorizontalLabels"
 import GraphVerticalLabels from "@/components/GraphVerticalLabels"
 import Layout from "@/components/Layout"
 import { getLabelSize } from "@/utils"
 
-import App from "./App"
 import "./index.css"
 
 ;(() => {
@@ -33,14 +32,11 @@ import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        {/* <GlobalStyle /> */}
         <Layout>
             <Graph />
             <GraphHorizontalLabels />
             <GraphVerticalLabels />
-            <Content>
-                <App />
-            </Content>
+            <Article />
         </Layout>
     </React.StrictMode>
 )
