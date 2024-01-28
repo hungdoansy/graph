@@ -35,8 +35,10 @@ const GraphVerticalLabels = () => {
         const listener = () => {
             setLabels(getVerticalLabels())
         }
-
         window.addEventListener("resize", listener)
+
+        // need to manually trigger it again due to the delay of document.documentElement.scrollHeight
+        listener()
         return () => {
             window.removeEventListener("resize", listener)
         }

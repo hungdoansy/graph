@@ -39,10 +39,21 @@ const Time = styled.time<{ children: React.ReactNode; datetime: string }>`
     opacity: 0.5;
 `
 
+const BookIcon = styled.svg`
+    width: 24px;
+    height: 24px;
+
+    @media screen and (min-width: 1200px) {
+        width: unset;
+        height: unset;
+    }
+`
+
 const HeroTag = () => {
     return (
         <Wrapper>
-            <svg
+            <BookIcon
+                as="svg"
                 width={32}
                 height={32}
                 viewBox="0 0 32 32"
@@ -64,7 +75,7 @@ const HeroTag = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 />
-            </svg>
+            </BookIcon>
             <HeroAuthor>
                 <HeroArticleText>Article</HeroArticleText> by Richard Ekwonye
             </HeroAuthor>

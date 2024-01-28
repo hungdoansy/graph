@@ -20,17 +20,27 @@ body {
     --black: #000000;
     --dark-red: #F44336;
     --white: #FFFFFF;
+    --solid-outline-color: #e5e5e5;
+    --transparent-outline-color: hsla(0,0%,90%,.5);
 
+    --full-border-radius: 100px;
     --main-cell-dimension: 100px;
-    --small-text: 12px;
-    --regular-text: 18px;
     --article-width: 500px;
     --graph-width: 600px;
+
+    --small-text: 12px;
+    --regular-text: 16px;
+    --action-text: 18px;
+    --paragraph-text: 18px;
+
+    --ease-out-sine: cubic-bezier(0.39,0.58,0.57,1);
 }
 
 @media screen and (min-width: 1200px) {
     :root {
         --article-width: 1200px;
+        --regular-text: 18px;
+        --paragraph-text: 20px;
     }
 }
 

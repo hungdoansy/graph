@@ -36,7 +36,7 @@ export const getHorizontalLabels = () => {
 }
 
 export const getVerticalLabels = () => {
-    const numOfLabels = Math.ceil(window.innerHeight / getLabelSize())
+    const numOfLabels = Math.ceil(document.documentElement.scrollHeight / getLabelSize())
 
     const nums = Array.from({ length: numOfLabels }).map((_, index) => String(index * 100))
     return nums

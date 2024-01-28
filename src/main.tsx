@@ -19,7 +19,7 @@ import "./index.css"
         if (screenWidth > 1200) {
             graphWidth = Math.ceil(screenWidth / labelSize / 2) * 2 * labelSize
         } else {
-            graphWidth = 100 + Math.floor(screenWidth / labelSize / 2) * 2 * labelSize
+            graphWidth = 100 + Math.ceil(screenWidth / labelSize / 2) * 2 * labelSize
         }
 
         const root = document.documentElement

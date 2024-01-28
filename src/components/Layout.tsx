@@ -5,7 +5,6 @@ const Layout = styled.div`
     width: 100vw;
 
     min-height: 100vh;
-    height: 100vh;
 
     overflow: unset;
     display: flex;
