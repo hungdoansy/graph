@@ -49,6 +49,10 @@ const BookIcon = styled.svg`
     }
 `
 
+const Link = styled.a`
+    text-decoration: none;
+`
+
 const HeroTag = () => {
     return (
         <Wrapper>
@@ -77,7 +81,10 @@ const HeroTag = () => {
                 />
             </BookIcon>
             <HeroAuthor>
-                <HeroArticleText>Article</HeroArticleText> by Richard Ekwonye
+                <HeroArticleText>Article</HeroArticleText> by{" "}
+                <Link as="a" target="_blank" rel="noreferrer" href="https://richardekwonye.com">
+                    Richard Ekwonye
+                </Link>
             </HeroAuthor>
 
             <Time datetime="2023-08">August 2023</Time>
