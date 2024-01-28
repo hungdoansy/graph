@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Beeline Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-        Droid Sans, Helvetica Neue, sans-serif;
+    font-family: "Beeline Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -18,10 +18,10 @@ body {
     --mild-gray-alt: #f7f7f7;
     --light-gray: #767676;
     --black: #000000;
-    --dark-red: #F44336;
-    --white: #FFFFFF;
+    --dark-red: #f44336;
+    --white: #ffffff;
     --solid-outline-color: #e5e5e5;
-    --transparent-outline-color: hsla(0,0%,90%,.5);
+    --transparent-outline-color: hsla(0, 0%, 90%, 0.5);
 
     --full-border-radius: 100px;
     --main-cell-dimension: 100px;
@@ -33,7 +33,7 @@ body {
     --action-text: 18px;
     --paragraph-text: 18px;
 
-    --ease-out-sine: cubic-bezier(0.39,0.58,0.57,1);
+    --ease-out-sine: cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 @media screen and (min-width: 1200px) {
@@ -58,4 +58,36 @@ body {
     font-family: "Beeline Sans";
     src: url("/fonts/BeelineSans-Medium.woff2") format("woff2");
     font-weight: 500;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: 0.5s ease-in 1s fadeIn;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    opacity: 1;
+    animation: 0.5s ease-in 1s fadeOut;
+    animation-fill-mode: forwards;
 }

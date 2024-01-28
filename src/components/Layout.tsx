@@ -6,9 +6,13 @@ const Layout = styled.div`
 
     min-height: 100vh;
 
-    overflow: unset;
+    overflow: hidden;
     display: flex;
     justify-content: center;
+
+    @media screen and (min-width: 560px) {
+        overflow: unset;
+    }
 `
 
 export default Layout

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 import HeroTag from "./HeroTag"
@@ -86,15 +87,44 @@ const Footer = styled.footer`
     text-decoration: underline;
 `
 
+const ToggleButton = styled.button`
+    outline: none;
+    text-decoration: none;
+
+    padding: 12px 24px 12px;
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--solid-outline-color);
+
+    display: flex;
+    align-items: center;
+
+    color: var(--black);
+    font-family: inherit;
+    line-height: 1.6;
+    font-weight: 500;
+    font-size: var(--regular-text);
+`
+
 const Article = () => {
+    const [isVisible, setVisible] = useState(true)
+
     return (
-        <Wrapper>
+        <Wrapper as="div" className={isVisible ? "fadeIn" : "fadeOut"}>
             <main>
                 <section>
                     <Hero>
                         <HeroTitle />
                         <HeroTag />
                     </Hero>
+                </section>
+
+                <section>
+                    <P>
+                        <ToggleButton as="button" onClick={() => setVisible((v) => !v)}>
+                            <span>Hide content</span>
+                        </ToggleButton>
+                    </P>
                 </section>
 
                 <section>
