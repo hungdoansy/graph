@@ -1,6 +1,12 @@
+import styled from "styled-components"
+
+const Text = styled.div`
+    margin-top: 120px;
+`
+
 function App() {
     return (
-        <div className="App">
+        <Text>
             Bézier curves have been a recurring theme in my frontend engineering career. I have used them extensively in
             my work - in animations and SVG paths of illustrations and icons. However, I only recently took an interest
             in understanding the underlying logic that governs their behaviour. This demystified curve-related path
@@ -12,7 +18,7 @@ function App() {
             at variable rate/speed.Predefined CSS easings like ease, ease-in, ease-out and ease-in-out as well as
             commonly used smooth easings like ease in sine and ease in cubic are examples of cubic Bézier easing
             functions. Custom easings can also be generated with cubic Bézier easing functions.
-        </div>
+        </Text>
     )
 }
 
